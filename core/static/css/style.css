@@ -1,0 +1,505 @@
+:root{
+    --main-bg-color: #ED6666;
+    --accent-color: #6BBDEB;
+    --font-white: #FFFFFF;
+    --font-black: #000000;
+    --gradient-second-color: #C15555;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraBold.ttf") format("opentype");
+    font-weight: 800;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-ExtraBoldItalic.ttf") format("opentype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-BoldItalic.ttf") format("opentype");
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf") format("opentype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 900;
+}
+p{
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(50% 50% at 50% 50%, var(--main-bg-color) 0%, var(--gradient-second-color) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+.header__title{
+    margin: auto;
+}
+.header__text {
+   margin-top: auto;
+   margin-bottom: 20px;
+}
+
+.nav {
+    height: 120px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: var(--accent-color);
+    padding: 0 20px;
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.56);
+    z-index: 1000;
+ }
+.nav__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--font-white);
+}
+
+.nav__logo {
+    position: relative;
+}
+.nav__logo::before{
+    content: "С.Д";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(100%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
+}
+
+.nav__burger-icon {
+    position: relative;
+}
+.nav__burger-icon::before{
+    content: "меню";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    padding-right: 5px;
+}
+
+.nav__burger-toggler:checked ~ .nav__burger-body {
+    transform: scale(1);
+}
+.nav__burger-toggler:checked ~ .nav__container .menu__icon::after{
+    content: "закрыть";
+}
+.nav__burger-body {
+    transform: scale(0);
+}
+
+.nav__burger-body {
+    transform: scale(0);
+    position: fixed;
+    right: 0;
+    top: 120px;
+    background: var(--accent-color);
+    height: calc(100vh - 120px);
+    width: 100%;
+    transition: 0.5s;
+    transform-origin: top right; 
+}
+
+.nav__item {
+    display: block;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--font-white);
+    text-decoration: none;
+    margin-right: 27px;
+    margin-bottom: 42px;
+}
+
+.nav__burger-toggler {
+    position: fixed;
+    top:40px;
+    right: 20px;
+    width: 100px;
+    height: 48px;
+    z-index: 10;
+    opacity: 0;
+}
+
+
+/* ачало кода ДЗ1 */
+.nav__back{
+    display: block;
+    margin-top: 30px;
+}
+.back__icon{
+    position: relative;
+    color: var(--font-white);
+}
+
+.about {
+    background: var(--main-bg-color);
+    min-height: 100vh;
+}
+.about__container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    padding: 0 10px;
+    padding-top: 160px;
+    margin: 0 auto;
+}
+.about_text {
+    font-size: 16px;
+    font-style: italic;
+    text-align: center;
+    color: var(--font-white);
+}
+.about__card {
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--font-white);
+    height: 153px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--accent-color);
+    text-align: right;
+}
+.back__icon::after{
+    content: "Назад";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: var(--font-white);
+    transform: translate(100%, -50%);
+    font-size: 1rem;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 5px;
+}
+
+/*Конец кода ДЗ1*/
+
+.sports {
+    background: var(--main-bg-color);
+    width: 100%;
+    padding: 20px;
+    color: var(--font-white);
+}
+
+.sports__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.sports__card_body {
+    position: relative;
+    height: 835px;
+    transform-style: preserve-3d;
+    height: 835px;
+    transition: 1s;
+}
+.sports__card_front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+}
+.sports__card_back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--accent-color);
+    transform: rotateY(180deg);
+    z-index: 2;
+    backface-visibility: hidden;
+    padding: 30px;
+}
+
+.sports__card_toggler:checked ~ .sports__card_body {
+    transform: rotateY(180deg);
+}
+
+.front__top {
+  padding: 30px 10px;
+  background: var(--accent-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.front__image {
+    height: 60%;
+    flex-grow: 1;
+}
+ 
+.front__footer {
+    padding: 45px 10px;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--font-black);
+    background: var(--font-white);
+    text-align: center;
+}
+
+.back__title {
+    margin-bottom: 32px;
+}
+.back__text {
+    font-size: 1rem;
+}
+.sports__card_back hr{
+    width: 100%;
+    margin: 30px auto;
+    background: var(--font-white);
+    border: none;
+    height: 2px;
+}
+.sports__card {
+    perspective: 1000px;
+    position: relative;
+    margin: 20px 0;
+}
+
+.sports__card_toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 5;
+}
+
+.advantages {
+    width: 100%;
+    padding: 60px 10px;
+    background: var(--main-bg-color);
+   
+}
+.advantages__title{
+    color: var(--font-white);
+    text-align: center;
+    margin-bottom: 81px;
+}
+.advantages__cards {
+    display: flex;
+    flex-direction: column;
+}
+ 
+.advantages__card {
+    padding: 16px;
+    border-radius: 10px;
+    background: var(--font-white);
+    height: 286px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: var(--accent-color);
+}
+
+.advantages__card-title {
+    text-align: right;
+    width: 70%;
+    align-self: flex-end;
+}
+.form {
+    width: 100%;
+    padding: 40px 10px 70px 10px;
+    background: var(--font-white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.form__title {
+    color: var(--accent-color);
+}
+.form__body {
+    display: flex;
+    flex-direction: column;
+    margin-top: 44px;
+   width:100%
+}
+.form__body input, .form__body textarea{
+   padding: 8px 22px;
+   background: var(--main-bg-color);
+   font-size: 2rem;
+   font-style: italic;
+   font-weight: 400;
+   border: none;
+   outline: none;
+   margin-bottom: 39px;
+}
+.form__body input::placeholder{
+    color: var(--font-white);
+    opacity: 0.3;
+}
+.form__body textarea::placeholder{
+    color: var(--font-white);
+    opacity: 0.3;
+}
+.form__body textarea{
+    height: 268px;
+}
+.font__btn {
+    padding: 22px 0;
+    background: var(--main-bg-color);
+    text-align: center;
+    font: 1rem;
+    font-style: italic;
+    color: var(--font-white);
+    border: none;
+    outline: none;
+}
+.form__personal-agree {
+   display: flex;
+   font-style: italic;
+   color: var(--font-black);
+   font-weight: 600;
+   height: 42px;
+   margin-bottom: 39px;
+   align-items: center;
+}
+.form__personal-agree input {
+    width: 80px;
+    height: 100%;
+    margin-right: 25px;
+    margin-bottom: 0px;
+    position: relative;
+}
+.personal__checkbox::before {
+    content: "нет";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: var(--accent-color);
+    font-size: 1rem;
+    color: var(--font-white);
+    padding: 13px 0;
+}
+.personal__checkbox:checked::before {
+    content: "да";
+    background: var(--main-bg-color);
+}
+*::selection{
+    background: var(--accent-color);
+    color: var(--main-bg-color);
+}
+
+
+/*Начало кода ДЗ №2*/
+
+@media screen and (min-width:500px) {    
+    .sports__card {
+        max-width: 350px;
+        width: 100%;
+        margin: 20px auto;
+    }
+}
+@media screen and (min-width:900px) {   
+    body{
+        background: #ED6666;
+    }
+    .sports__container {
+        max-width: 1300px;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0 auto;
+    } 
+    .sports__card {
+        margin: 20px 15px;
+    }
+    .header__title{
+        font-size: 120px;
+        line-height: 100%;
+    }
+    .advantages__cards {
+        max-width: 1300px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .advantages__card {
+        width: 45%;
+    }
+    .form {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+    .form__body {
+        max-width: 900px;
+    }
+    .form__personal-agree {
+        align-self: center;
+    }
+}
+
+/*Конец кода ДЗ №2*/

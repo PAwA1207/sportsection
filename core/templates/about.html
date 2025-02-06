@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="icon" href='{% static "img/favicon.ico" %}' type="image/x-icon">
+    <link rel="stylesheet" href='{% static "css/style.css" %}?v=1'>
+    <script src="https://kit.fontawesome.com/c131d0d17a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="nav">
+        <a href="index" class="nav__back">
+            <i class="fa-solid fa-circle-arrow-left fa-3x back__icon"></i>
+        </a>
+    </nav>
+    <main class="main">
+        <section class="about">
+            <div class="about__container">
+                <p class="about_text">Мы огромный спорт кампус. Наша компания предоставляет услуги по тренировкам и
+                    подготовке. Мы работаем как с новичками и обычными людьми, которые занимаются для оздоровления, так и с
+                    проф спортсменами. У нас в распоряжении несколько крытых и открытых стадионов для разных видов спорта.
+                    Имеется столовая. Штатные врачи и массажисты. Есть даже психолог. Возможны индивидуальные занятия и
+                    занятия в группах. У нас достаточно демократичные цены. А еще мы имеем гранты от государства. В общем,
+                    мы классные, приходи к нам заниматься спортом</p>
+                <div class="about__card">
+                    <i class="fa-solid fa-place-of-worship fa-4x"></i>
+                    <h2 class="about__card-title">Просторные<br>залы</h2>
+                </div>    
+                <div class="about__card">
+                    <i class="fa-solid fa-user-shield fa-4x" ></i>
+                    <h2 class="about__card-title">Надежный<br>персонал</h2>
+                </div>   
+                <div class="about__card">
+                    <i class="fa-solid fa-wallet fa-4x"></i>
+                    <h2 class="about__card-title">Хорошие<br>цены</h2>
+                </div>   
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Спортивная секция</title>
+		<link rel="stylesheet" type="text/css" href='{% static "css/style.css" %}?v=1'>
+		<link rel="icon" href='{% static "img/favicon.ico" %}' type="image/x-icon">
+		<script src="https://kit.fontawesome.com/c131d0d17a.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<nav class="nav">
+			<input type="checkbox" class="nav__burger-toggler">
+			<div class="nav__container">
+				<div class="nav__logo">
+					<i class="fa-solid fa-person-running fa-3x  logo__icon"></i>
+				</div>
+				<div class="nav__burger-icon">
+					<i class="fa-solid fa-compass fa-3x menu__icon"></i>
+				</div>
+			</div>
+			<div class="nav__burger-body">
+	            <a href="#" class="nav__item">Секции</a>
+	            <a href="#" class="nav__item">Преимущества</a>
+	            <a href="#" class="nav__item">Связь</a>
+	            <a href="about" class="nav__item">Справка</a>
+	        </div>
+		</nav>  
+		<header class="header">
+	        <h1 class="header__title">Спорт<br>Дом</h1>
+	        <p class="header__text">Выбери себе спорт</p>
+	    </header>
+	    <main class="main">
+	    	<section class="sports">
+		        <div class="sports__container">
+		            <div class="sports__card">
+		                <input type="checkbox" class="sports__card_toggler">
+		                <div class="sports__card_body">
+		                    <div class="sports__card_front">
+		                    	<div class="front__top">
+		                            <i class="fa-solid fa-futbol fa-3x"></i>
+		                            <h2>ФУТБОЛ</h2>
+		                        </div>
+		                        <img src='{% static "img/football.png" %}' class="front__image">
+                        		<footer class="front__footer">
+                        			Нажмите, чтобы узнать подробнее
+                        		</footer>
+		                    </div>
+		                    <div class="sports__card_back">
+		                    	<h2 class="back__title">Футбол</h2>
+		                        <p class="back__text">
+		                        	Командрая игра. Основной состав каждой команды это 11 человек.
+		                            Продолжительность игры 90 минут + Овертайм( если нужен).
+		                            Футбол, одна из самых популярных игр на планете земля. 
+		                        </p>
+		                        <hr>
+		                        <p class="back__text">
+		                        	У нас вы сможете записаться в команду и заниматься с тренерами нашего Спорт Дома
+		                        </p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="sports__card">
+		                <input type="checkbox" class="sports__card_toggler">
+		                <div class="sports__card_body">
+		                    <div class="sports__card_front">
+		                    	<div class="front__top">
+		                            <i class="fa-solid fa-basketball-ball fa-3x"></i>
+		                            <h2>БАСКЕТБОЛ</h2>
+		                        </div>
+		                        <img src='{% static "img/basket.png" %}' class="front__image">
+                        		<footer class="front__footer">
+                        			Нажмите, чтобы узнать подробнее
+                        		</footer>
+		                    </div>
+		                    <div class="sports__card_back">
+		                    	<h2 class="back__title">Баскетбол</h2>
+		                        <p class="back__text">
+		                        	Командрая игра. Основной состав каждой команды это 5 человек. Продолжительность игры от 40 до 48 минут. 4 периода по 10 или 12 минут. В некоторых странах баскетбол популярней футбола.
+		                        </p>
+		                        <hr>
+		                        <p class="back__text">
+		                        	У нас вы сможете записаться в команду и заниматься с тренерами нашего Спорт Дома
+		                        </p>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="sports__card">
+		                <input type="checkbox" class="sports__card_toggler">
+		                <div class="sports__card_body">
+		                    <div class="sports__card_front">
+		                    	<div class="front__top">
+		                            <i class="fa-solid fa-hockey-puck fa-3x"></i>
+		                            <h2>ХОККЕЙ</h2>
+		                        </div>
+		                        <img src='{% static "img/hockey.png" %}' class="front__image">
+                        		<footer class="front__footer">
+                        			Нажмите, чтобы узнать подробнее
+                        		</footer>
+		                    </div>
+		                    <div class="sports__card_back">
+		                    	<h2 class="back__title">Хоккей</h2>
+		                        <p class="back__text">
+		                        	Командрая игра. Основной состав 5 человек. Продолжительность игры 1 час. 3 периода по 20 минут + овертаймы при необходимости. Спорт для крепких и суровых ребят 
+		                        </p>
+		                        <hr>
+		                        <p class="back__text">
+		                        	У нас вы сможете записаться в команду и заниматься с тренерами нашего Спорт Дома
+		                        </p>
+		                    </div>
+		                </div>
+		            </div>
+		        </div>
+		    </section>
+		    <section class="advantages">
+				<h2 class="advantages__title">Наши Преимущества</h2>
+		        <div class="advantages__cards">
+		            <div class="advantages__card">
+		            	<i class="fas fa-ambulance fa-5x"></i>
+                		<h2 class="advantages__card-title">Мед поддержка</h2>
+		            </div>
+		            <div class="advantages__card">
+		            	<i class="fas fa-blender fa-5x"></i>
+                		<h2 class="advantages__card-title">Помощь в питании</h2>
+		            </div>
+		            <div class="advantages__card">
+		            	<i class="fas fa-bus fa-5x"></i>
+                		<h2 class="advantages__card-title">Бесплатный транспорт</h2>
+		            </div>
+		            <div class="advantages__card">
+		            	<i class="fas fa-grin fa-5x"></i>
+                		<h2 class="advantages__card-title">Атмосфера дружелюбия и поддержки</h2>
+		            </div>
+		        </div>
+		    </section>
+		    <section class="form">
+		        <h2 class="form__title">Оставь немного данных о себе</h2>
+		        <form action="#" class="form__body">
+		            <input type="text" placeholder="Имя" class="form__name">
+		            <input type="text" placeholder="Телефон" class="form__phone">
+		            <input type="text" placeholder="Почта" class="form__mail">
+		            <textarea placeholder="Комментарий" class="form__comment"></textarea>
+		  			<div class="form__personal-agree">
+		                <input type="checkbox" class="personal__checkbox" id="personal__checkbox">
+		                <label for="personal__checkbox">Даю согласие на обработку</label>
+		            </div>
+		            <button class="font__btn">Отправить</button>
+		        </form>
+		    </section>
+
+	    </main>
+	</body>
+</html>
